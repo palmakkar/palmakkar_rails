@@ -11,6 +11,7 @@ Rails.application.routes.draw do
 
   get '/messages/new' => 'messages#new'
   post '/messages' => 'messages#create'
+  get '/admin' => 'pages#admin'
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
 

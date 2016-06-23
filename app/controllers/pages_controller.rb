@@ -14,5 +14,6 @@ class PagesController < ApplicationController
   end
 
   def admin
+    @time = Time.now
   end
 end
