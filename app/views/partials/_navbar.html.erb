@@ -1,4 +1,16 @@
-<div style='display: block; width: 100%; height: 90px; background-color: black; color: white;'>
-	<%= link_to "About", about_path %>
-	<%= link_to "Contact", contact_path %>
+<div class='navbar'>
+	<div class='container'>
+		<ul id="homebar" class="navigation-bar">
+			<li id="logo">
+				<%= link_to root_path do %>
+	   				<%= image_tag "logo.png", style: "width:304px;height:50px;" %>
+				<% end %>
+			</li>
+			<li class='nav-link'><%= link_to "Contact", contact_path %></li>
+			<li class='nav-link'><%= link_to "About", about_path %></li>
+			<% if user_signed_in? %>
+				<li class='nav-link'><%= link_to "Log Out", destroy_user_session_path, method: :delete %></li>
+			<% end %>
+		</ul>
+	</div>
 </div>

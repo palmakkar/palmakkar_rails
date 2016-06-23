@@ -6,16 +6,6 @@ body{
 }
 
 a {
-	color: yellow;
 	text-decoration: none;
-
-	&:visited {
-		color: yellow;
-	}
-	
-	&:hover {
-		color: red;
-		cursor: pointer;
-	}
 }
 

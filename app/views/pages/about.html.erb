@@ -1,7 +1,17 @@
-<h1>Pages#about</h1>
-<p>Find me in app/views/pages/about.html.erb</p>
+<div class="content relative" style='width:70%; margin:0 auto'>
+	<div id='profile-pic' style='display:inline-block'>
+		<%= image_tag("pal.jpg", :alt => "picture of Pal", width: '304px', height: '350px') %>
+	</div>
+	<div id="about-info" style='display:inline-block;position:absolute; margin-left: 3em;'>
+		<h1 style="margin-bottom:0">ABOUT ME</h1>
+		<ul class="inline-block" style="list-style-type:circle;text-align:left">
+			<li>19 year old programmer</li>
+			<li>Studying computer science at UC Berkeley</li>
+			<li>Rising Web Developer</li>
+		</ul>
+	</div>
 
-<!-- exercise using JS update the time every second -->
-<!-- hint look at JS setInterval -->
-<h2>Today is <%= @now.strftime("%m/%d/%Y") %></h2>
-<h2>The time is <%= @now.strftime("%H:%M:%S") %>
+
+</div>
+
+

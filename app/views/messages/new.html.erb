@@ -1,0 +1,26 @@
+<h1> Leave a message </h1>
+
+
+
+<div id='message-form'>
+	<%= form_for @message do |f| %>
+
+		<% if @message.errors.any? %>
+			<p>This form contains errors</p>
+			<ul>
+				<% @message.errors.full_messages.each do |msg| %>
+					<li><%= msg %></li>
+				<% end %>
+			</ul>
+		<% end %>
+
+		<%= f.label :email %>
+	  <%= f.text_field :email %><br />
+
+	  <%= f.label :body %>
+	  <%= f.text_field :body %><br />
+
+	  <%= f.submit %>
+
+	<% end %>
+</div>
