@@ -1,2 +1,29 @@
 <h1>Admin</h1>
-<%= @time %>
+
+<table class="table table-bordered table-hover">
+	<tr>
+		<th>ID</th>
+		<th>Email</th>
+		<th>Message</th>
+		<th>Show</th>
+		<th>Edit</th>
+		<th>Delete</th>
+  </tr>
+
+  <% @messages.each do |message| %>
+
+	  <tr>
+
+	  	<td><%= message.id %></td>
+			<td><%= message.email %></td>
+			<td><%= message.body %></td>
+			<td><%= button_to 'show', message_path(message), method: :get %></td>
+			<td><%= button_to 'edit', edit_message_path(message), method: :get %></td>
+			<td><%= button_to 'delete', message_path(message), method: :delete %></td>
+
+		</tr>
+
+	<% end %>
+
+</table>
+

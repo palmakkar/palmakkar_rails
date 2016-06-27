@@ -14,6 +14,7 @@ class PagesController < ApplicationController
   end
 
   def admin
+    @messages = Message.all
     @time = Time.now
   end
 end

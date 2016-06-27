@@ -14,6 +14,25 @@ class MessagesController < ApplicationController
 		end
 	end
 
+	def show
+		@message = Message.find(params[:id])
+	end
+
+	def edit
+		@message = Message.find(params[:id])
+	end
+
+	def update
+		@message = Message.find(params[:id])
+		if @message.update_attributes(message_params)
+			flash[:success] = "Message successfully updated"
+			redirect_to @message
+		else
+			render 'edit'
+		end
+	end
+
+
 	private
 
 	#white list parameters
